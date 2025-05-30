@@ -87,6 +87,14 @@ public class VibrationVIEWAPI
 		return arr;
 	}
 
+	public Array GetFrequencyVectorValues(VibrationVIEWLib.vvVector channel)
+	{
+		int count = GetChannelCount();
+		var vectorLength = _vibrationVIEW.VectorLength[channel];
+		Array arr = Array.CreateInstance(typeof(float), vectorLength);
+		_vibrationVIEW.Vector(ref arr, channel);
+		return arr;
+	}
 
 	public Array GetControlValues()
 	{
@@ -130,6 +138,10 @@ public class VibrationVIEWAPI
 		Array controlValues = GetControlValues();
 		Array demandValues = GetDemandValues();
 		Array channelValues = GetChannelValues();
+		for (int channel = 1; channel <= count; channel++)
+		{
+			Array freqVectorValues = GetFrequencyVectorValues(VibrationVIEWLib.vvVector.VV_FREQUENCYAXIS + channel);
+		}
 		List<string> controlUnits = GetControlUnits();
 		List<string> channelUnits = GetChannelUnits();
 
