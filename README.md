@@ -21,7 +21,8 @@ Follow these steps to clone, build, and run the application.
 ## ✅ Prerequisites
 
 - Windows operating system (compatible with Windows 10 and Windows 11)
-- VibrationVIEW software installed (compatible with version 10.0 and above)
+- VibrationVIEW software installed
+- VibrationVIEW automation option (VR9604) - OR - VibrationVIEW may be run in Simulation mode without any additional hardware or software
 - [.NET SDK](https://dotnet.microsoft.com/download) **version 8 or later**  
   Confirm .NET 8 or newer is installed by running:
 
